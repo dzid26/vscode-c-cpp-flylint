@@ -285,11 +285,6 @@ export async function getCppProperties(cCppPropertiesPath: string, currentSettin
                                     });
 
                                     if (acceptFile) {
-                                        // Windows drive letter must be prefixed with a slash
-                                        if (currentFilePath[0] !== '/') {
-                                            currentFilePath = '/' + currentFilePath;
-                                        }
-
                                         if (currentSettings[FLYLINT_ID].debug) {
                                             // eslint-disable-next-line no-console
                                             console.log('Adding path: ' + currentFilePath);
